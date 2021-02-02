@@ -30,6 +30,8 @@ async function run(): Promise<void> {
       })
 
       if (compressed) {
+        info(`[${image}] compressed`)
+        debug(`[${image}] Adding`)
         compressedImages.push(image)
       }
     }
