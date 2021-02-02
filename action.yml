@@ -1,6 +1,6 @@
 name: 'Tinify Image Action'
 description: 'Compress and resize images with the Tinify API'
-author: 'namoscato'
+author: 'shop-mirad (forked from namoscato)'
 inputs:
   api_key:
     description: 'Tinify API key'
@@ -27,7 +27,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'docker://namoscato/github-action-tinify:v1'
+  image: 'docker://shop-mirad/github-action-tinify:v1'
 branding:
   icon: 'image'
   color: 'green'

@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      - uses: namoscato/action-tinify@v1
+      - uses: shop-mirad/action-tinify@v1
         with:
           api_key: ${{ secrets.TINIFY_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}

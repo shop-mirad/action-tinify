@@ -6,6 +6,27 @@ import Git from './git'
 
 async function run(): Promise<void> {
   try {
+
+    const path = require('path');
+    const fs = require('fs');
+    //joining path of directory
+    const directoryPath = path.join(__dirname, './');
+    //passsing directoryPath and callback function
+    debug(`Looking for files in ${directoryPath}`)
+    fs.readdir(directoryPath, function (err, files) {
+        //handling error
+        if (err) {
+            debug(`Unable to scan directory: ${err}`)
+        } else {
+          //listing all files using forEach
+          files.forEach(function (file) {
+              // Do whatever you want to do with the file
+              debug(`Found file: ${file}`)
+          });
+        }
+    });
+
+
     tinify.key = getInput('api_key', {required: true})
     const git = new Git(getInput('github_token', {required: true}))
 
